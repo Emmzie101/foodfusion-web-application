@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['user_email'] = $user['email'];
 
-            header("Location: ../community.php");
+            header("Location: ../pages/community-main.php");
             exit;
         }
     }

@@ -67,3 +67,7 @@
 
 </head>
 <body>
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="../assets/js/about.js"></script>

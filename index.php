@@ -439,9 +439,34 @@
 
 
 
+<section class="social-section">
+
+  <p class="social-label">Join the conversation</p>
+
+  <div class="social-links">
+    <a href="#" aria-label="Instagram" target="_blank">
+      <i data-lucide="instagram"></i>
+    </a>
+
+    <a href="#" aria-label="Twitter / X" target="_blank">
+      <i data-lucide="twitter"></i>
+    </a>
+
+    <a href="#" aria-label="Facebook" target="_blank">
+      <i data-lucide="facebook"></i>
+    </a>
+
+    <a href="#" aria-label="YouTube" target="_blank">
+      <i data-lucide="youtube"></i>
+    </a>
+  </div>
+
+</section>
 
 
 <div class="cookie-banner" id="cookieBanner">
+  <button class="cookie-close" onclick="acceptCookies()">×</button>
+
   <p>
     We use cookies to improve your experience and analyze site traffic.
     <a href="privacy.php">Privacy Policy</a>
@@ -463,6 +488,10 @@
 
     text.style.transform = `translateY(${40 - scrollY * 0.08}px)`;
   });
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
 </script>
 
 <script>
@@ -525,4 +554,19 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
   track.scrollBy({ left: -320, behavior: 'smooth' });
 });
+</script>
+
+<script>
+
+function acceptCookies() {
+  localStorage.setItem('cookiesAccepted', 'true');
+  banner.style.display = 'none';
+}
+</script>
+<script>
+const banner = document.getElementById('cookieBanner');
+
+function acceptCookies() {
+  banner.style.display = 'none';
+}
 </script>

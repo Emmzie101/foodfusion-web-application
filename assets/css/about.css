@@ -1,0 +1,158 @@
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  color: #f5eee8;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.heading span {
+  color: #ff9100;
+}
+
+.foodfusion-parallax {
+  height: 120vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 1px;
+  background: linear-gradient(
+    180deg,
+    #2b1810,
+    #3a1f14,
+    #4a2616
+  );
+}
+
+.parallax-spacer {
+  height: 950vh;
+}
+
+/* Layers */
+.parallax__layer {
+  position: absolute;
+  inset: 0;
+}
+
+.parallax__layer--back {
+  transform: translateZ(-2px) scale(3);
+}
+
+.parallax__layer--back2 {
+  transform: translateZ(-6px) scale(5);
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+/* Floating elements */
+.floating {
+  position: absolute;
+  width: 220px;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(4deg); }
+}
+
+/* Positions */
+.plate.a { top: 30%; left: 8%; }
+.plate.b { top: 65%; right: 10%; }
+.plate.c { top: 110%; left: 15%; }
+.plate.d { top: 160%; right: 12%; }
+
+.food.f1 { top: 210%; left: 20%; width: 180px; }
+.food.f2 { top: 260%; right: 18%; width: 200px; }
+
+/* STORY FLOW */
+.story-flow {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-phase {
+  min-height: 120vh;
+  padding: 0 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+}
+
+/* Cards */
+.story-card {
+  background: rgba(255,245,235,0.08);
+  backdrop-filter: blur(14px);
+  padding: 3rem;
+  border-radius: 24px;
+  color: #f5eee8;
+  max-width: 600px;
+  position: relative;
+  top: 450px;
+}
+
+.story-card.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-card.offset-left {
+  align-self: flex-start;
+}
+
+.story-card.offset-right {
+  align-self: flex-end;
+}
+
+/* .story-card span {
+  
+} */
+
+/* COMMUNITY */
+.community-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.community-card {
+  width: 260px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  top: 450px;
+}
+
+.community-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* TEAM */
+.team-cards {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  position: relative;
+  top: 450px;
+}
+
+.team-card {
+  width: 240px;
+  text-align: center;
+  color: #f5eee8;
+  max-height: 10px;
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 18px;
+}
+
